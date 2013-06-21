@@ -125,7 +125,7 @@ a {
 }
 
 .tagline {
-	font-size: $base-font-size;
+	font-size: round($base-font-size*1.1);
 	font-weight: 300;
 	line-height: round($base-font-size*2.5);
 	color: $gray;
