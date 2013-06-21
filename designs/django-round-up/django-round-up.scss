@@ -150,6 +150,8 @@ table { padding: 0 $spacing*2; }
 	padding-top: $spacing;
 	padding-bottom: $spacing;
 
+	border-top: 2px solid lighten($gray, 55%);
+
 	background: $light-gray;
 	font-size: 14px;
 
