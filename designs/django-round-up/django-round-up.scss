@@ -25,7 +25,8 @@ $text-color: #282828;
 // Global Styles
 
 body { 
-	background: $light-gray url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP48OHDfwaiAE6VAFMdB5+t33KmAAAAAElFTkSuQmCC); 
+	background-color: $light-gray;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP48OHDfwaiAE6VAFMdB5+t33KmAAAAAElFTkSuQmCC); 
 }
 
 body, h1, h2, h3, h4, h5, h6, p, table, tr, td {
@@ -49,17 +50,29 @@ h2 {
 	margin-bottom: $spacing/2;
 	color: $green;
 	font-size: 18px;
+
+	&.sponsor-title {
+		color: darken($green, 20%);
+	}
 }
 
-h3, h4 {
+h3, h4, h5 {
 	margin-bottom: $spacing/4;
 	font-weight: normal;
 	font-size: 16px;
 }
 
+h6 {
+	font-size: 14px;
+}
+
 hr {
 	border: 1px dotted lighten($gray, 20%);
 	margin: $spacing 0;
+}
+
+small {
+	font-size: 13px;
 }
 
 a {
@@ -80,6 +93,28 @@ a {
 	margin-bottom: 0;
 }
 
+.sponsor {
+
+	padding: 0;
+
+	td {
+		vertical-align: top;
+	}
+
+	h5 {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.blurb {
+		padding-right: $spacing;
+	}
+
+	p {
+		margin-bottom: $spacing/2;
+	}
+}
+
 // Logo {
 
 .logo-round {
@@ -91,6 +126,7 @@ a {
 
 .tagline {
 	font-size: $base-font-size;
+	font-weight: 300;
 	line-height: round($base-font-size*2.5);
 	color: $gray;
 }
@@ -143,7 +179,7 @@ table { padding: 0 $spacing*2; }
 
 // Footer
 
-.footer {
+.sub-footer, .footer {
 	width: 100%;
 
 	margin-top: $spacing*2;
@@ -152,7 +188,6 @@ table { padding: 0 $spacing*2; }
 
 	border-top: 2px solid lighten($gray, 55%);
 
-	background: $light-gray;
 	font-size: 14px;
 
 	td {
@@ -168,7 +203,25 @@ table { padding: 0 $spacing*2; }
 	}
 }
 
+.footer {
+	border-top: 0;
+	margin-top: 0;
+
+	background: darken($light-gray, 2%);
+	color: $dark-gray;
+
+	h6, p {
+		color: $dark-gray;
+		font-size: 13px;
+	}
+}
+
 .copyright {
 	font-size: 13px;
+	font-weight: 300;
 	color: $gray;
+}
+
+.fine-print {
+	margin-bottom: $spacing;
 }

@@ -1,5 +1,6 @@
 body {
-  background: #f7f7f7 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP48OHDfwaiAE6VAFMdB5+t33KmAAAAAElFTkSuQmCC); }
+  background-color: #f7f7f7;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP48OHDfwaiAE6VAFMdB5+t33KmAAAAAElFTkSuQmCC); }
 
 body, h1, h2, h3, h4, h5, h6, p, table, tr, td {
   margin: 0;
@@ -17,15 +18,23 @@ h2 {
   margin-bottom: 10px;
   color: #8e8757;
   font-size: 18px; }
+  h2.sponsor-title {
+    color: #4f4b30; }
 
-h3, h4 {
+h3, h4, h5 {
   margin-bottom: 5px;
   font-weight: normal;
   font-size: 16px; }
 
+h6 {
+  font-size: 14px; }
+
 hr {
   border: 1px dotted #999999;
   margin: 20px 0; }
+
+small {
+  font-size: 13px; }
 
 a {
   color: #3480bb; }
@@ -38,6 +47,18 @@ a {
 .last {
   margin-bottom: 0; }
 
+.sponsor {
+  padding: 0; }
+  .sponsor td {
+    vertical-align: top; }
+  .sponsor h5 {
+    font-size: 16px;
+    font-weight: bold; }
+  .sponsor .blurb {
+    padding-right: 20px; }
+  .sponsor p {
+    margin-bottom: 10px; }
+
 .logo-round {
   font-family: "Lucida Console", Monaco, monospace;
   font-weight: 300;
@@ -46,6 +67,7 @@ a {
 
 .tagline {
   font-size: 15px;
+  font-weight: 300;
   line-height: 38px;
   color: #666666; }
 
@@ -78,21 +100,33 @@ table {
   .header td {
     padding: 20px 0; }
 
-.footer {
+.sub-footer, .footer {
   width: 100%;
   margin-top: 40px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 2px solid #f2f2f2;
-  background: #f7f7f7;
   font-size: 14px; }
-  .footer td {
+  .sub-footer td, .footer td {
     padding: 10px; }
-  .footer .aux-box {
+  .sub-footer .aux-box, .footer .aux-box {
     text-align: right; }
-  .footer a {
+  .sub-footer a, .footer a {
     color: #666666; }
+
+.footer {
+  border-top: 0;
+  margin-top: 0;
+  background: #f2f2f2;
+  color: #444444; }
+  .footer h6, .footer p {
+    color: #444444;
+    font-size: 13px; }
 
 .copyright {
   font-size: 13px;
+  font-weight: 300;
   color: #666666; }
+
+.fine-print {
+  margin-bottom: 20px; }
