@@ -2,6 +2,7 @@
 
 $base-font: Helvetica, "Lucida Grande", Arial, sans-serif;
 $alt-font: Georgia, serif;
+$code-font: "Lucida Console", Monaco, monospace;
 
 $base-font-size: 16px;
 $base-line-height: 24px;
@@ -21,10 +22,6 @@ $green: #8E8757;
 
 $text-color: #282828;
 
-// Imports
-@import "mixins";
-
-
 // Global Styles
 
 body { background: $light-gray; }
@@ -41,6 +38,11 @@ body, h1, h2, h3, h4, h5, h6, p, table, tr, td {
   
 }
 
+h1 {
+	font-size: $base-font-size*2.25;
+	line-height: $base-line-height*2.25;
+}
+
 h2 {
 	margin-bottom: $spacing/2;
 	color: $green;
@@ -51,7 +53,7 @@ h3, h4 {
 }
 
 hr {
-	border: 1px dotted lighten($gray, 30%);
+	border: 1px dotted lighten($gray, 40%);
 	margin: $spacing 0;
 }
 
@@ -62,6 +64,32 @@ a {
 		text-decoration: none;
 	}
 }
+
+// Common
+
+.item {
+	margin-bottom: $spacing;
+}
+
+.last {
+	margin-bottom: 0;
+}
+
+// Logo {
+
+.logo-round {
+	font-family: $code-font;
+	font-weight: 300;
+	letter-spacing: -1px;
+	color: lighten(red, 20%);
+}
+
+.tagline {
+	font-size: $base-font-size;
+	line-height: $base-font-size*2.5;
+	color: $gray;
+}
+
 
 // Layout
 
@@ -78,10 +106,29 @@ a {
 	-webkit-box-shadow: 0 0 $spacing/4 lighten($gray, 25%);
 }
 
-.item {
-	margin-bottom: $spacing;
+// Sub-Header
+.sub-header {
+	width: 100%;
+
+	td {
+		color: $gray;
+		font-size: $base-font-size*.9;
+	}
+
+	.logo-box { 
+		text-align: right; 
+	}
 }
 
-.last {
-	margin-bottom: 0;
+// Header 
+.header {
+	width: 100%;
+	margin: $spacing/2 0 $spacing;
+
+	border-top: 2px solid $light-gray;
+	border-bottom: 4px solid $light-gray;
+
+	td {
+		padding: $spacing 0;
+	}
 }
