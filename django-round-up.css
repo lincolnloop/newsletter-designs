@@ -1,0 +1,41 @@
+body {
+  background: #f7f7f7; }
+
+body, h1, h2, h3, h4, h5, h6, p, table, tr, td {
+  margin: 0;
+  padding: 0;
+  color: #282828;
+  font-family: Helvetica, "Lucida Grande", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px; }
+
+h2 {
+  margin-bottom: 10px;
+  color: #8e8757; }
+
+h3, h4 {
+  font-weight: normal; }
+
+hr {
+  border: 1px dotted #b3b3b3;
+  margin: 20px 0; }
+
+a {
+  color: #3480bb; }
+  a:hover {
+    text-decoration: none; }
+
+.newsletter {
+  width: 520px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 0 5px #a6a6a6;
+  -moz-box-shadow: 0 0 5px #a6a6a6;
+  -webkit-box-shadow: 0 0 5px #a6a6a6; }
+
+.item {
+  margin-bottom: 20px; }
+
+.last {
+  margin-bottom: 0; }

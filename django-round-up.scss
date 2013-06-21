@@ -1,0 +1,87 @@
+// Variables
+
+$base-font: Helvetica, "Lucida Grande", Arial, sans-serif;
+$alt-font: Georgia, serif;
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+$spacing: 20px;
+
+// Palette
+$white: #fff;
+$black: #141414;
+
+$light-gray: #f7f7f7;
+$dark-gray: #444;
+$gray: #666;
+
+$blue: #23577F;
+$green: #8E8757;
+
+$text-color: #282828;
+
+// Imports
+@import "mixins";
+
+
+// Global Styles
+
+body { background: $light-gray; }
+
+body, h1, h2, h3, h4, h5, h6, p, table, tr, td {
+  margin: 0;
+  padding: 0;
+
+  color: $text-color;
+
+  font-family: $base-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  
+}
+
+h2 {
+	margin-bottom: $spacing/2;
+	color: $green;
+}
+
+h3, h4 {
+	font-weight: normal;
+}
+
+hr {
+	border: 1px dotted lighten($gray, 30%);
+	margin: $spacing 0;
+}
+
+a {
+	color: lighten($blue, 15%);
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// Layout
+
+.newsletter {
+	width: 520px;
+
+	margin: 0 auto;
+	padding: $spacing $spacing*2;
+
+	background: $white;
+
+	box-shadow: 0 0 $spacing/4 lighten($gray, 25%);
+	-moz-box-shadow: 0 0 $spacing/4 lighten($gray, 25%);
+	-webkit-box-shadow: 0 0 $spacing/4 lighten($gray, 25%);
+}
+
+.item {
+	margin-bottom: $spacing;
+}
+
+.last {
+	margin-bottom: 0;
+}
