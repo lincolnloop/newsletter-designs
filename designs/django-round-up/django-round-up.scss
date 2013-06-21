@@ -4,8 +4,8 @@ $base-font: Helvetica, "Lucida Grande", Arial, sans-serif;
 $alt-font: Georgia, serif;
 $code-font: "Lucida Console", Monaco, monospace;
 
-$base-font-size: 16px;
-$base-line-height: 24px;
+$base-font-size: 15px;
+$base-line-height: round($base-font-size*1.5);
 
 $spacing: 20px;
 
@@ -24,7 +24,9 @@ $text-color: #282828;
 
 // Global Styles
 
-body { background: $light-gray; }
+body { 
+	background: $light-gray url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWO4efPmfwaiAE6VADrbBxXAqZ5FAAAAAElFTkSuQmCC); 
+}
 
 body, h1, h2, h3, h4, h5, h6, p, table, tr, td {
   margin: 0;
@@ -39,21 +41,24 @@ body, h1, h2, h3, h4, h5, h6, p, table, tr, td {
 }
 
 h1 {
-	font-size: $base-font-size*2.25;
-	line-height: $base-line-height*2.25;
+	font-size: $base-font-size*2.5;
+	line-height: $base-line-height*2.5;
 }
 
 h2 {
 	margin-bottom: $spacing/2;
 	color: $green;
+	font-size: 18px;
 }
 
 h3, h4 {
+	margin-bottom: $spacing/4;
 	font-weight: normal;
+	font-size: 16px;
 }
 
 hr {
-	border: 1px dotted lighten($gray, 40%);
+	border: 1px dotted lighten($gray, 20%);
 	margin: $spacing 0;
 }
 
@@ -86,18 +91,17 @@ a {
 
 .tagline {
 	font-size: $base-font-size;
-	line-height: $base-font-size*2.5;
+	line-height: round($base-font-size*2.5);
 	color: $gray;
 }
-
 
 // Layout
 
 .newsletter {
-	width: 520px;
+	width: 600px;
 
 	margin: 0 auto;
-	padding: $spacing $spacing*2;
+	padding: $spacing 0 0;
 
 	background: $white;
 
@@ -106,13 +110,15 @@ a {
 	-webkit-box-shadow: 0 0 $spacing/4 lighten($gray, 25%);
 }
 
+table { padding: 0 $spacing*2; }
+
 // Sub-Header
 .sub-header {
 	width: 100%;
 
 	td {
 		color: $gray;
-		font-size: $base-font-size*.9;
+		font-size: round($base-font-size*.9);
 	}
 
 	.logo-box { 
@@ -128,7 +134,39 @@ a {
 	border-top: 2px solid $light-gray;
 	border-bottom: 4px solid $light-gray;
 
+	text-align: center;
+
 	td {
 		padding: $spacing 0;
 	}
+}
+
+// Footer
+
+.footer {
+	width: 100%;
+
+	margin-top: $spacing*2;
+	padding-top: $spacing;
+	padding-bottom: $spacing;
+
+	background: $light-gray;
+	font-size: 14px;
+
+	td {
+		padding: $spacing/2;
+	}
+
+	.aux-box {
+		text-align: right;
+	}
+
+	a {
+		color: $gray;
+	}
+}
+
+.copyright {
+	font-size: 13px;
+	color: $gray;
 }
