@@ -131,8 +131,18 @@ a {
 	color: $gray;
 }
 
-// Layout
+.closing {
+	color: $gray;
 
+	padding-top: $spacing;
+
+	font-family: $alt-font;
+	font-size: round($base-font-size*1.3);
+	font-style: italic;
+	text-align: center;
+}
+
+// Layout
 .newsletter {
 	width: 600px;
 
@@ -178,7 +188,6 @@ table { padding: 0 $spacing*2; }
 }
 
 // Footer
-
 .sub-footer, .footer {
 	width: 100%;
 
@@ -212,12 +221,16 @@ table { padding: 0 $spacing*2; }
 
 	h6, p {
 		color: $dark-gray;
-		font-size: 13px;
+		font-size: round($base-font-size*.85);
+	}
+
+	p {
+		line-height: round($base-line-height*.85);
 	}
 }
 
 .copyright {
-	font-size: 13px;
+	font-size: round($base-font-size*.85);
 	font-weight: 300;
 	color: $gray;
 }

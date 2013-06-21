@@ -71,6 +71,14 @@ a {
   line-height: 38px;
   color: #666666; }
 
+.closing {
+  color: #666666;
+  padding-top: 20px;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center; }
+
 .newsletter {
   width: 600px;
   margin: 0 auto;
@@ -122,6 +130,8 @@ table {
   .footer h6, .footer p {
     color: #444444;
     font-size: 13px; }
+  .footer p {
+    line-height: 20px; }
 
 .copyright {
   font-size: 13px;
