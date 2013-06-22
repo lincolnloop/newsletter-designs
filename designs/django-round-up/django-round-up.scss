@@ -54,7 +54,7 @@ h1 {
 }
 
 h2 {
-	margin-bottom: $spacing/2;
+	margin-bottom: round($spacing/1.5);
 	color: $green !important; // Important to override Hotmail's overrides
 	font-size: 18px;
 
