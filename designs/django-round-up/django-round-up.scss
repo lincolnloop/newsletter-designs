@@ -94,6 +94,7 @@ table td {
 }
 
 table { 
+	width: 100%;
 	border-collapse: collapse;
 	mso-table-lspace: 0pt; 
 	mso-table-rspace: 0pt; 
@@ -185,7 +186,7 @@ a {
 
 // Layout
 .newsletter {
-	width: 62.5%;
+	width: 60%;
 
 	margin: 0 auto;
 	padding: $spacing 0 0;
