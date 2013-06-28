@@ -176,7 +176,12 @@ body, #Body-Table {
   /* Prevent iOS Mail from adding padding to the body */
   /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
   #Body-Cell {
-    padding: 10px !important; }
+    padding: 0 !important;
+    border-top: none; }
+
+  #Template-Container {
+    -moz-box-shadow: none;
+    box-shadow: none; }
 
   /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
   /* ======== Page Styles ======== */

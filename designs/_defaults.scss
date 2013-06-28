@@ -202,7 +202,13 @@ body, #Body-Table {
 
 	/* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
 	#Body-Cell{
-		padding: $spacing/2 !important;
+		padding: 0 !important;
+		border-top: none;
+	}
+
+	#Template-Container {
+		-moz-box-shadow: none;
+		box-shadow: none;
 	}
 
 	/* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
@@ -215,7 +221,7 @@ body, #Body-Table {
 	* @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
 	*/
 	#Template-Container {
-		max-width: 600px !important;
+		max-width: $container-width !important;
 		width: 100% !important;
 	}
 
