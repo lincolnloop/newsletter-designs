@@ -1,0 +1,305 @@
+/* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+#outlook a { padding: 0; } /* Force Outlook to provide a "view in browser" message */
+
+.ReadMsgBody { width: 100%; } 
+.ExternalClass{ width: 100%; } /* Force Hotmail to display emails at full width */
+
+.ExternalClass, 
+.ExternalClass p, 
+.ExternalClass span, 
+.ExternalClass font, 
+.ExternalClass td, 
+.ExternalClass div { line-height: 100%; } /* Force Hotmail to display normal line spacing */
+
+/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+body, h1, h2, h3, h4, h5, h6, p, table, tr, td, a, li, blockquote {
+	margin: 0;
+	padding: 0;
+
+	color: $text-color;
+
+	font-family: $base-font;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+
+	/* Prevent WebKit and Windows mobile changing default text sizes */
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+  
+}
+
+table, td { 
+	mso-table-lspace: 0pt; 
+	mso-table-rspace: 0pt;
+} /* Remove spacing between tables in Outlook 2007 and up */
+
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: round($spacing/2);
+	margin-left: 0;
+
+	padding: 0;
+
+	font-weight: bold;
+	text-align: left;
+
+	&.sponsor-title {
+		color: darken($green, 20%) !important;
+	}
+
+	a {
+		color: $blue !important;
+	}
+
+	a:visited {
+		color: purple !important;
+	}
+}
+
+img {
+	border: 0; 
+	height: auto; 
+	line-height: 100%; 
+	outline: none; 
+	text-decoration: none;
+
+	/* Allow smoother rendering of resized image in Internet Explorer */
+	-ms-interpolation-mode: bicubic;
+}
+
+table { 
+	border-collapse: collapse !important; 
+}
+
+body, #Body-Table, #Body-Cell {
+	height: 100% !important; 
+	margin: 0; 
+	padding: 0; 
+	width: 100% !important;
+}
+
+body, #Body-Table {
+	background-color: $light-gray;
+}
+
+/* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
+
+/* ========== Page Styles ========== */
+
+#Body-Cell { padding: $spacing; }
+#Template-Container { width: $container-width; }
+
+body, #Body-Table {
+	/*@editable*/ background-color: $white;
+}
+
+
+#Body-Cell {
+	border-top: 4px solid $white;
+}
+
+/* ========== Header Styles ========== */
+
+// Sub-Header
+.preheader-content {
+	background: $light-gray;
+	color: $gray;
+	font-size: round($base-font-size*.9);
+
+	vertical-align: middle;
+}
+
+.logo-box { 
+	text-align: right; 
+}
+
+.preheader-content a:link, 
+.preheader-content a:visited, /* Yahoo! Mail Override */ 
+.preheader-content a .yshortcuts /* Yahoo! Mail Override */{
+	/*@editable*/ color: $gray !important;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+
+.header-content{
+	padding-top: $spacing;
+	padding-right: 0;
+	padding-bottom: $spacing;
+	padding-left: 0;
+	vertical-align: middle;
+}
+
+
+.header-content a:link, 
+.header-content a:visited, /* Yahoo! Mail Override */ 
+.header-content a .yshortcuts /* Yahoo! Mail Override */{
+	/*@editable*/ color: $blue;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+
+/* ========== Body Styles ========== */
+
+.body-content{
+	padding-top: $spacing;
+	padding-right: $spacing;
+	padding-bottom: $spacing;
+	padding-left: $spacing;
+}
+
+
+.body-content a:link, 
+.body-content a:visited, /* Yahoo! Mail Override */ 
+.body-content a .yshortcuts /* Yahoo! Mail Override */{
+	color: darken($blue, 20%);
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+.body-content img {
+	display: inline;
+	height: auto;
+	max-width: 560px;
+}
+
+/* ========== Footer Styles ========== */
+
+.footer-content{
+	padding-top: $spacing;
+	padding-right: $spacing;
+	padding-bottom: $spacing;
+	padding-left: $spacing;
+}
+
+.copyright, .advertise {
+	padding-top: 0;
+}
+
+.footer-content a:link, 
+.footer-content a:visited, /* Yahoo! Mail Override */ 
+.footer-content a .yshortcuts, 
+.footer-content a span /* Yahoo! Mail Override */{
+	color: $gray;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+/* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
+
+@media only screen and (max-width: 480px){
+	/* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+	body, table, td, p, a, li, blockquote { 
+		-webkit-text-size-adjust: none !important; 
+	} /* Prevent Webkit platforms from changing default text sizes */
+    
+    body {
+    	width: 100% !important; 
+    	min-width: 100% !important;
+    } /* Prevent iOS Mail from adding padding to the body */
+
+	/* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
+	#Body-Cell{
+		padding: $spacing/2 !important;
+	}
+
+	/* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
+
+	/* ======== Page Styles ======== */
+
+	/**
+	* @tab Mobile Styles
+	* @section template width
+	* @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
+	*/
+	#Template-Container {
+		max-width: 600px !important;
+		width: 100% !important;
+	}
+
+	/**
+	* @tab Mobile Styles
+	* @section heading 1
+	* @tip Make the first-level headings larger in size for better readability on small screens.
+	*/
+	h1 {
+		/*@editable*/ font-size: 24px !important;
+		/*@editable*/ line-height: 100% !important;
+	}
+
+	/**
+	* @tab Mobile Styles
+	* @section heading 2
+	* @tip Make the second-level headings larger in size for better readability on small screens.
+	*/
+	h2 {
+		/*@editable*/ font-size: 20px !important;
+		/*@editable*/ line-height: 100% !important;
+	}
+
+	/**
+	* @tab Mobile Styles
+	* @section heading 3
+	* @tip Make the third-level headings larger in size for better readability on small screens.
+	*/
+	h3 {
+		/*@editable*/ font-size:18px !important;
+		/*@editable*/ line-height:100% !important;
+	}
+
+	/**
+	* @tab Mobile Styles
+	* @section heading 4
+	* @tip Make the fourth-level headings larger in size for better readability on small screens.
+	*/
+	h4 {
+		/*@editable*/ font-size:16px !important;
+		/*@editable*/ line-height:100% !important;
+	}
+
+	/* ======== Header Styles ======== */
+
+	#Template-Preheader{
+		display: none !important;
+	} /* Hide the template preheader to save space */
+
+	/**
+	* @tab Mobile Styles
+	* @section header text
+	* @tip Make the header content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+	*/
+	.header-content{
+		/*@editable*/ font-size: 20px !important;
+		/*@editable*/ line-height: 125% !important;
+	}
+
+	/* ======== Body Styles ======== */
+
+	/**
+	* @tab Mobile Styles
+	* @section body text
+	* @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+	*/
+	.body-content {
+		/*@editable*/ font-size:18px !important;
+		/*@editable*/ line-height:125% !important;
+	}
+
+	/* ======== Footer Styles ======== */
+
+	/**
+	* @tab Mobile Styles
+	* @section footer text
+	* @tip Make the body content text larger in size for better readability on small screens.
+	*/
+	.footer-content {
+		/*@editable*/ font-size:14px !important;
+		/*@editable*/ line-height:115% !important;
+	}
+
+	.footer-content a {
+		display: block !important;
+	} /* Place footer social and utility links on their own lines, for easier access */
+}

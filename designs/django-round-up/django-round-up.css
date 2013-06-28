@@ -1,17 +1,284 @@
-body {
-  width: 100% !important;
-  background-color: #f7f7f7;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP48OHDfwaiAE6VAFMdB5+t33KmAAAAAElFTkSuQmCC);
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+/* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+#outlook a {
+  padding: 0; }
 
-body, h1, h2, h3, h4, h5, h6, p, table, tr, td {
+/* Force Outlook to provide a "view in browser" message */
+.ReadMsgBody {
+  width: 100%; }
+
+.ExternalClass {
+  width: 100%; }
+
+/* Force Hotmail to display emails at full width */
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%; }
+
+/* Force Hotmail to display normal line spacing */
+/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+body, h1, h2, h3, h4, h5, h6, p, table, tr, td, a, li, blockquote {
   margin: 0;
   padding: 0;
   color: #282828;
   font-family: Helvetica, "Lucida Grande", Arial, sans-serif;
   font-size: 15px;
-  line-height: 23px; }
+  line-height: 23px;
+  /* Prevent WebKit and Windows mobile changing default text sizes */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+table, td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
+/* Remove spacing between tables in Outlook 2007 and up */
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding: 0;
+  font-weight: bold;
+  text-align: left; }
+  h1.sponsor-title, h2.sponsor-title, h3.sponsor-title, h4.sponsor-title, h5.sponsor-title, h6.sponsor-title {
+    color: #4f4b30 !important; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #23577f !important; }
+  h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+    color: purple !important; }
+
+img {
+  border: 0;
+  height: auto;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+  /* Allow smoother rendering of resized image in Internet Explorer */
+  -ms-interpolation-mode: bicubic; }
+
+table {
+  border-collapse: collapse !important; }
+
+body, #Body-Table, #Body-Cell {
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+  width: 100% !important; }
+
+body, #Body-Table {
+  background-color: #f7f7f7; }
+
+/* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
+/* ========== Page Styles ========== */
+#Body-Cell {
+  padding: 20px; }
+
+#Template-Container {
+  width: 600px; }
+
+body, #Body-Table {
+  /*@editable*/
+  background-color: white; }
+
+#Body-Cell {
+  border-top: 4px solid white; }
+
+/* ========== Header Styles ========== */
+.preheader-content {
+  background: #f7f7f7;
+  color: #666666;
+  font-size: 14px;
+  vertical-align: middle; }
+
+.logo-box {
+  text-align: right; }
+
+.preheader-content a:link,
+.preheader-content a:visited,
+.preheader-content a .yshortcuts {
+  /*@editable*/
+  color: #666666 !important;
+  /*@editable*/
+  font-weight: normal;
+  /*@editable*/
+  text-decoration: underline; }
+
+.header-content {
+  padding-top: 20px;
+  padding-right: 0;
+  padding-bottom: 20px;
+  padding-left: 0;
+  vertical-align: middle; }
+
+.header-content a:link,
+.header-content a:visited,
+.header-content a .yshortcuts {
+  /*@editable*/
+  color: #23577f;
+  /*@editable*/
+  font-weight: normal;
+  /*@editable*/
+  text-decoration: underline; }
+
+/* ========== Body Styles ========== */
+.body-content {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px; }
+
+.body-content a:link,
+.body-content a:visited,
+.body-content a .yshortcuts {
+  color: #0d202f;
+  font-weight: normal;
+  text-decoration: underline; }
+
+.body-content img {
+  display: inline;
+  height: auto;
+  max-width: 560px; }
+
+/* ========== Footer Styles ========== */
+.footer-content {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px; }
+
+.copyright, .advertise {
+  padding-top: 0; }
+
+.footer-content a:link,
+.footer-content a:visited,
+.footer-content a .yshortcuts,
+.footer-content a span {
+  color: #666666;
+  font-weight: normal;
+  text-decoration: underline; }
+
+/* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
+@media only screen and (max-width: 480px) {
+  /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+  body, table, td, p, a, li, blockquote {
+    -webkit-text-size-adjust: none !important; }
+
+  /* Prevent Webkit platforms from changing default text sizes */
+  body {
+    width: 100% !important;
+    min-width: 100% !important; }
+
+  /* Prevent iOS Mail from adding padding to the body */
+  /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
+  #Body-Cell {
+    padding: 10px !important; }
+
+  /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
+  /* ======== Page Styles ======== */
+  /**
+  * @tab Mobile Styles
+  * @section template width
+  * @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
+  */
+  #Template-Container {
+    max-width: 600px !important;
+    width: 100% !important; }
+
+  /**
+  * @tab Mobile Styles
+  * @section heading 1
+  * @tip Make the first-level headings larger in size for better readability on small screens.
+  */
+  h1 {
+    /*@editable*/
+    font-size: 24px !important;
+    /*@editable*/
+    line-height: 100% !important; }
+
+  /**
+  * @tab Mobile Styles
+  * @section heading 2
+  * @tip Make the second-level headings larger in size for better readability on small screens.
+  */
+  h2 {
+    /*@editable*/
+    font-size: 20px !important;
+    /*@editable*/
+    line-height: 100% !important; }
+
+  /**
+  * @tab Mobile Styles
+  * @section heading 3
+  * @tip Make the third-level headings larger in size for better readability on small screens.
+  */
+  h3 {
+    /*@editable*/
+    font-size: 18px !important;
+    /*@editable*/
+    line-height: 100% !important; }
+
+  /**
+  * @tab Mobile Styles
+  * @section heading 4
+  * @tip Make the fourth-level headings larger in size for better readability on small screens.
+  */
+  h4 {
+    /*@editable*/
+    font-size: 16px !important;
+    /*@editable*/
+    line-height: 100% !important; }
+
+  /* ======== Header Styles ======== */
+  #Template-Preheader {
+    display: none !important; }
+
+  /* Hide the template preheader to save space */
+  /**
+  * @tab Mobile Styles
+  * @section header text
+  * @tip Make the header content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+  */
+  .header-content {
+    /*@editable*/
+    font-size: 20px !important;
+    /*@editable*/
+    line-height: 125% !important; }
+
+  /* ======== Body Styles ======== */
+  /**
+  * @tab Mobile Styles
+  * @section body text
+  * @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+  */
+  .body-content {
+    /*@editable*/
+    font-size: 18px !important;
+    /*@editable*/
+    line-height: 125% !important; }
+
+  /* ======== Footer Styles ======== */
+  /**
+  * @tab Mobile Styles
+  * @section footer text
+  * @tip Make the body content text larger in size for better readability on small screens.
+  */
+  .footer-content {
+    /*@editable*/
+    font-size: 14px !important;
+    /*@editable*/
+    line-height: 115% !important; }
+
+  .footer-content a {
+    display: block !important; }
+
+  /* Place footer social and utility links on their own lines, for easier access */ }
+body, #Body-Table {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP48OHDfwaiAE6VAFMdB5+t33KmAAAAAElFTkSuQmCC); }
 
 h1 {
   font-size: 37.5px;
@@ -21,8 +288,6 @@ h2 {
   margin-bottom: 13px;
   color: #8e8757 !important;
   font-size: 18px; }
-  h2.sponsor-title {
-    color: #4f4b30 !important; }
 
 h3, h4, h5 {
   margin-bottom: 5px;
@@ -32,11 +297,6 @@ h3, h4, h5 {
 h6 {
   font-size: 14px; }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #23577f !important; }
-h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-  color: purple !important; }
-
 table td {
   border-collapse: collapse;
   padding: 0 40px; }
@@ -44,7 +304,6 @@ table td {
     padding: 0; }
 
 table {
-  width: 100%;
   border-collapse: collapse;
   mso-table-lspace: 0pt;
   mso-table-rspace: 0pt; }
@@ -108,58 +367,49 @@ a {
   text-align: center; }
 
 .newsletter {
-  width: 60%;
   margin: 0 auto;
   padding: 20px 0 0;
   background: white;
   box-shadow: 0 0 5px #a6a6a6;
   -moz-box-shadow: 0 0 5px #a6a6a6;
-  -webkit-box-shadow: 0 0 5px #a6a6a6; }
+  -webkit-box-shadow: 0 0 5px #a6a6a6;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px; }
 
-.sub-header {
-  width: 100%; }
-  .sub-header td {
-    color: #666666;
-    font-size: 14px; }
-  .sub-header .logo-box {
-    text-align: right; }
-
-.header {
+.header-content {
   width: 100%;
   margin: 10px 0 20px;
   border-top: 2px solid #f7f7f7;
   border-bottom: 4px solid #f7f7f7;
   text-align: center; }
-  .header td {
-    padding: 20px 0; }
+  .header-content h1 {
+    text-align: center; }
 
-.sub-footer, .footer {
-  width: 100%;
-  margin-top: 40px;
+#Template-Sub-Footer {
+  border-top: 2px solid #f2f2f2; }
+
+.footer-content {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 2px solid #f2f2f2;
   font-size: 14px; }
-  .sub-footer td, .footer td {
+  .footer-content.td {
     padding: 10px 40px; }
-  .sub-footer .first td, .footer .first td {
-    padding-top: 20px; }
-  .sub-footer .last td, .footer .last td {
-    padding-bottom: 20px; }
-  .sub-footer .aux-box, .footer .aux-box {
-    text-align: right; }
-  .sub-footer a, .footer a {
+  .footer-content a {
     color: #666666; }
 
-.footer {
+.forward {
+  text-align: right; }
+
+.footer, #Template-Footer {
   border-top: 0;
   margin-top: 0;
   background: #f2f2f2;
   color: #444444; }
-  .footer h6, .footer p {
+  .footer h6, .footer p, #Template-Footer h6, #Template-Footer p {
     color: #444444;
     font-size: 13px; }
-  .footer p {
+  .footer p, #Template-Footer p {
     line-height: 20px; }
 
 .copyright {
