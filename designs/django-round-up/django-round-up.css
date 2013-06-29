@@ -1,5 +1,7 @@
 /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
-#outlook a {
+#outlook a,
+#outlook .body-content a .yshortcuts,
+.body-content a #outlook .yshortcuts {
   padding: 0; }
 
 /* Force Outlook to provide a "view in browser" message */
@@ -20,7 +22,9 @@
 
 /* Force Hotmail to display normal line spacing */
 /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
-body, h1, h2, h3, h4, h5, h6, p, table, tr, td, a, li, blockquote {
+body, h1, h2, h3, h4, h5, h6, p, table, tr, td, a, .body-content a:link,
+.body-content a:visited,
+.body-content a .yshortcuts, li, blockquote {
   margin: 0;
   padding: 0;
   color: #282828;
@@ -31,11 +35,26 @@ body, h1, h2, h3, h4, h5, h6, p, table, tr, td, a, li, blockquote {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
+body, #Body-Table, #Body-Cell {
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0;
+  padding: 0; }
+
+body, #Body-Table {
+  background-color: #f7f7f7; }
+
 table, td {
+  border-collapse: collapse !important;
   mso-table-lspace: 0pt;
   mso-table-rspace: 0pt; }
 
 /* Remove spacing between tables in Outlook 2007 and up */
+table td {
+  padding: 0 40px; }
+  table td td {
+    padding: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   display: block;
   margin-top: 0;
@@ -47,10 +66,75 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left; }
   h1.sponsor-title, h2.sponsor-title, h3.sponsor-title, h4.sponsor-title, h5.sponsor-title, h6.sponsor-title {
     color: #4f4b30 !important; }
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  h1 a, h1 .body-content a:link, .body-content h1 a:link,
+  h1 .body-content a:visited,
+  .body-content h1 a:visited,
+  h1 .body-content a .yshortcuts,
+  .body-content a h1 .yshortcuts, h2 a, h2 .body-content a:link, .body-content h2 a:link,
+  h2 .body-content a:visited,
+  .body-content h2 a:visited,
+  h2 .body-content a .yshortcuts,
+  .body-content a h2 .yshortcuts, h3 a, h3 .body-content a:link, .body-content h3 a:link,
+  h3 .body-content a:visited,
+  .body-content h3 a:visited,
+  h3 .body-content a .yshortcuts,
+  .body-content a h3 .yshortcuts, h4 a, h4 .body-content a:link, .body-content h4 a:link,
+  h4 .body-content a:visited,
+  .body-content h4 a:visited,
+  h4 .body-content a .yshortcuts,
+  .body-content a h4 .yshortcuts, h5 a, h5 .body-content a:link, .body-content h5 a:link,
+  h5 .body-content a:visited,
+  .body-content h5 a:visited,
+  h5 .body-content a .yshortcuts,
+  .body-content a h5 .yshortcuts, h6 a, h6 .body-content a:link, .body-content h6 a:link,
+  h6 .body-content a:visited,
+  .body-content h6 a:visited,
+  h6 .body-content a .yshortcuts,
+  .body-content a h6 .yshortcuts {
     color: #23577f !important; }
-  h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+  h1 a:visited, h1 .body-content a:visited:link, .body-content h1 a:visited:link,
+  h1 .body-content a:visited,
+  .body-content h1 a:visited,
+  h1 .body-content a .yshortcuts:visited,
+  .body-content a h1 .yshortcuts:visited, h2 a:visited, h2 .body-content a:visited:link, .body-content h2 a:visited:link,
+  h2 .body-content a:visited,
+  .body-content h2 a:visited,
+  h2 .body-content a .yshortcuts:visited,
+  .body-content a h2 .yshortcuts:visited, h3 a:visited, h3 .body-content a:visited:link, .body-content h3 a:visited:link,
+  h3 .body-content a:visited,
+  .body-content h3 a:visited,
+  h3 .body-content a .yshortcuts:visited,
+  .body-content a h3 .yshortcuts:visited, h4 a:visited, h4 .body-content a:visited:link, .body-content h4 a:visited:link,
+  h4 .body-content a:visited,
+  .body-content h4 a:visited,
+  h4 .body-content a .yshortcuts:visited,
+  .body-content a h4 .yshortcuts:visited, h5 a:visited, h5 .body-content a:visited:link, .body-content h5 a:visited:link,
+  h5 .body-content a:visited,
+  .body-content h5 a:visited,
+  h5 .body-content a .yshortcuts:visited,
+  .body-content a h5 .yshortcuts:visited, h6 a:visited, h6 .body-content a:visited:link, .body-content h6 a:visited:link,
+  h6 .body-content a:visited,
+  .body-content h6 a:visited,
+  h6 .body-content a .yshortcuts:visited,
+  .body-content a h6 .yshortcuts:visited {
     color: purple !important; }
+
+h1 {
+  font-size: 37.5px;
+  line-height: 57.5px; }
+
+h2 {
+  margin-bottom: 13px;
+  color: #8e8757 !important;
+  font-size: 18px; }
+
+h3, h4, h5 {
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
 
 img {
   border: 0;
@@ -61,17 +145,25 @@ img {
   /* Allow smoother rendering of resized image in Internet Explorer */
   -ms-interpolation-mode: bicubic; }
 
-table {
-  border-collapse: collapse !important; }
+hr {
+  border: 1px dotted #999999;
+  margin: 20px 0; }
 
-body, #Body-Table, #Body-Cell {
-  height: 100% !important;
-  width: 100% !important;
-  margin: 0;
-  padding: 0; }
+small {
+  font-size: 13px; }
 
-body, #Body-Table {
-  background-color: #f7f7f7; }
+a, .body-content a:link,
+.body-content a:visited,
+.body-content a .yshortcuts {
+  color: #3480bb; }
+  a img, .body-content a:link img,
+  .body-content a:visited img,
+  .body-content a .yshortcuts img {
+    border: none; }
+  a:hover, .body-content a:hover:link,
+  .body-content a:hover:visited,
+  .body-content a .yshortcuts:hover {
+    text-decoration: none; }
 
 /* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
 /* ========== Page Styles ========== */
@@ -87,6 +179,11 @@ body, #Body-Table {
 #Body-Cell {
   border-top: 4px solid white; }
 
+.newsletter {
+  margin: 0 auto;
+  padding: 20px 0 0;
+  background: white; }
+
 /* ========== Header Styles ========== */
 .preheader-content {
   background: #f7f7f7;
@@ -97,9 +194,25 @@ body, #Body-Table {
 .logo-box {
   text-align: right; }
 
-.preheader-content a:link,
+.preheader-content a:link, .preheader-content .body-content a:link, .body-content .preheader-content a:link,
+.preheader-content .body-content a:link:visited,
+.body-content .preheader-content a:link:visited,
+.preheader-content .body-content a .yshortcuts:link,
+.body-content a .preheader-content .yshortcuts:link,
 .preheader-content a:visited,
-.preheader-content a .yshortcuts {
+.preheader-content .body-content a:visited:link,
+.body-content .preheader-content a:visited:link,
+.preheader-content .body-content a:visited,
+.body-content .preheader-content a:visited,
+.preheader-content .body-content a .yshortcuts:visited,
+.body-content a .preheader-content .yshortcuts:visited,
+.preheader-content a .yshortcuts,
+.preheader-content .body-content a:link .yshortcuts,
+.body-content .preheader-content a:link .yshortcuts,
+.preheader-content .body-content a:visited .yshortcuts,
+.body-content .preheader-content a:visited .yshortcuts,
+.preheader-content .body-content a .yshortcuts .yshortcuts,
+.body-content a .preheader-content .yshortcuts .yshortcuts {
   /*@editable*/
   color: #666666 !important;
   /*@editable*/
@@ -114,15 +227,42 @@ body, #Body-Table {
   padding-left: 0;
   vertical-align: middle; }
 
-.header-content a:link,
+.header-content a:link, .header-content .body-content a:link, .body-content .header-content a:link,
+.header-content .body-content a:link:visited,
+.body-content .header-content a:link:visited,
+.header-content .body-content a .yshortcuts:link,
+.body-content a .header-content .yshortcuts:link,
 .header-content a:visited,
-.header-content a .yshortcuts {
+.header-content .body-content a:visited:link,
+.body-content .header-content a:visited:link,
+.header-content .body-content a:visited,
+.body-content .header-content a:visited,
+.header-content .body-content a .yshortcuts:visited,
+.body-content a .header-content .yshortcuts:visited,
+.header-content a .yshortcuts,
+.header-content .body-content a:link .yshortcuts,
+.body-content .header-content a:link .yshortcuts,
+.header-content .body-content a:visited .yshortcuts,
+.body-content .header-content a:visited .yshortcuts,
+.header-content .body-content a .yshortcuts .yshortcuts,
+.body-content a .header-content .yshortcuts .yshortcuts {
   /*@editable*/
   color: #23577f;
   /*@editable*/
   font-weight: normal;
   /*@editable*/
   text-decoration: underline; }
+
+.header-content {
+  text-align: center; }
+  .header-content h1 {
+    text-align: center; }
+
+.tagline {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 38px;
+  color: #666666; }
 
 /* ========== Body Styles ========== */
 .body-content {
@@ -131,10 +271,17 @@ body, #Body-Table {
   padding-bottom: 20px;
   padding-left: 20px; }
 
-.body-content a:link,
+.body-content a:link, .body-content a:link,
+.body-content a:link:visited,
+.body-content a .yshortcuts:link,
 .body-content a:visited,
-.body-content a .yshortcuts {
-  color: #0d202f;
+.body-content a:visited:link,
+.body-content a:visited,
+.body-content a .yshortcuts:visited,
+.body-content a .yshortcuts,
+.body-content a:link .yshortcuts,
+.body-content a:visited .yshortcuts,
+.body-content a .yshortcuts .yshortcuts {
   font-weight: normal;
   text-decoration: underline; }
 
@@ -143,6 +290,21 @@ body, #Body-Table {
   height: auto;
   max-width: 560px; }
 
+.item {
+  margin-bottom: 20px; }
+
+.sponsor {
+  padding: 0; }
+  .sponsor td {
+    vertical-align: top; }
+  .sponsor h5 {
+    font-size: 16px;
+    font-weight: bold; }
+  .sponsor .blurb {
+    padding-right: 20px; }
+  .sponsor p {
+    margin-bottom: 10px; }
+
 /* ========== Footer Styles ========== */
 .footer-content {
   padding-top: 20px;
@@ -150,21 +312,68 @@ body, #Body-Table {
   padding-bottom: 20px;
   padding-left: 20px; }
 
-.copyright, .advertise {
-  padding-top: 0; }
-
-.footer-content a:link,
+.footer-content a:link, .footer-content .body-content a:link, .body-content .footer-content a:link,
+.footer-content .body-content a:link:visited,
+.body-content .footer-content a:link:visited,
+.footer-content .body-content a .yshortcuts:link,
+.body-content a .footer-content .yshortcuts:link,
 .footer-content a:visited,
+.footer-content .body-content a:visited:link,
+.body-content .footer-content a:visited:link,
+.footer-content .body-content a:visited,
+.body-content .footer-content a:visited,
+.footer-content .body-content a .yshortcuts:visited,
+.body-content a .footer-content .yshortcuts:visited,
 .footer-content a .yshortcuts,
-.footer-content a span {
+.footer-content .body-content a:link .yshortcuts,
+.body-content .footer-content a:link .yshortcuts,
+.footer-content .body-content a:visited .yshortcuts,
+.body-content .footer-content a:visited .yshortcuts,
+.footer-content .body-content a .yshortcuts .yshortcuts,
+.body-content a .footer-content .yshortcuts .yshortcuts,
+.footer-content a span,
+.footer-content .body-content a:link span,
+.body-content .footer-content a:link span,
+.footer-content .body-content a:visited span,
+.body-content .footer-content a:visited span,
+.footer-content .body-content a .yshortcuts span,
+.body-content a .footer-content .yshortcuts span {
   color: #666666;
   font-weight: normal;
   text-decoration: underline; }
 
+.footer-content {
+  font-size: 14px; }
+  .footer-content.td {
+    padding: 10px 40px; }
+
+#Template-Footer {
+  background: #f2f2f2;
+  color: #444444; }
+  #Template-Footer h6, #Template-Footer p {
+    color: #444444;
+    font-size: 13px; }
+  #Template-Footer p {
+    line-height: 20px; }
+  #Template-Footer a,
+  #Template-Footer .body-content a .yshortcuts,
+  .body-content a #Template-Footer .yshortcuts {
+    color: #666666 !important; }
+
+.copyright, .advertise {
+  padding-top: 0; }
+
+.copyright {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666; }
+
 /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
 @media only screen and (max-width: 480px) {
   /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
-  body, table, td, p, a, li, blockquote {
+  body, table, td, p, a, .body-content a:link,
+  .body-content a:visited,
+  .body-content a .yshortcuts, li, blockquote {
     -webkit-text-size-adjust: none !important; }
 
   /* Prevent Webkit platforms from changing default text sizes */
@@ -277,103 +486,18 @@ body, #Body-Table {
     /*@editable*/
     line-height: 115% !important; }
 
-  .footer-content a {
+  .footer-content a, .footer-content .body-content a:link, .body-content .footer-content a:link,
+  .footer-content .body-content a:visited,
+  .body-content .footer-content a:visited,
+  .footer-content .body-content a .yshortcuts,
+  .body-content a .footer-content .yshortcuts {
     display: block !important; }
 
   /* Place footer social and utility links on their own lines, for easier access */ }
 body, #Body-Table {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP48OHDfwaiAE6VAFMdB5+t33KmAAAAAElFTkSuQmCC); }
 
-h1 {
-  font-size: 37.5px;
-  line-height: 57.5px; }
-
-h2 {
-  margin-bottom: 13px;
-  color: #8e8757 !important;
-  font-size: 18px; }
-
-h3, h4, h5 {
-  margin-bottom: 5px;
-  font-weight: normal;
-  font-size: 16px; }
-
-h6 {
-  font-size: 14px; }
-
-table td {
-  border-collapse: collapse;
-  padding: 0 40px; }
-  table td td {
-    padding: 0; }
-
-table {
-  border-collapse: collapse;
-  mso-table-lspace: 0pt;
-  mso-table-rspace: 0pt; }
-
-hr {
-  border: 1px dotted #999999;
-  margin: 20px 0; }
-
-img {
-  outline: none;
-  text-decoration: none;
-  -ms-interpolation-mode: bicubic; }
-
-a img {
-  border: none; }
-
-small {
-  font-size: 13px; }
-
-a {
-  color: #3480bb; }
-  a:hover {
-    text-decoration: none; }
-
-.item {
-  margin-bottom: 20px; }
-
-.last {
-  margin-bottom: 0; }
-
-.sponsor {
-  padding: 0; }
-  .sponsor td {
-    vertical-align: top; }
-  .sponsor h5 {
-    font-size: 16px;
-    font-weight: bold; }
-  .sponsor .blurb {
-    padding-right: 20px; }
-  .sponsor p {
-    margin-bottom: 10px; }
-
-.logo-round {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-weight: 300;
-  letter-spacing: -1px;
-  color: #ff6666; }
-
-.tagline {
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 38px;
-  color: #666666; }
-
-.closing {
-  color: #666666;
-  padding-top: 20px;
-  font-family: Georgia, serif;
-  font-size: 20px;
-  font-style: italic;
-  text-align: center; }
-
 .newsletter {
-  margin: 0 auto;
-  padding: 20px 0 0;
-  background: white;
   box-shadow: 0 0 5px #a6a6a6;
   -moz-box-shadow: 0 0 5px #a6a6a6;
   -webkit-box-shadow: 0 0 5px #a6a6a6;
@@ -382,44 +506,8 @@ a {
   border-radius: 2px; }
 
 .header-content {
-  width: 100%;
-  margin: 10px 0 20px;
   border-top: 2px solid #f7f7f7;
-  border-bottom: 4px solid #f7f7f7;
-  text-align: center; }
-  .header-content h1 {
-    text-align: center; }
+  border-bottom: 4px solid #f7f7f7; }
 
 #Template-Sub-Footer {
   border-top: 2px solid #f2f2f2; }
-
-.footer-content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 14px; }
-  .footer-content.td {
-    padding: 10px 40px; }
-  .footer-content a {
-    color: #666666; }
-
-.forward {
-  text-align: right; }
-
-.footer, #Template-Footer {
-  border-top: 0;
-  margin-top: 0;
-  background: #f2f2f2;
-  color: #444444; }
-  .footer h6, .footer p, #Template-Footer h6, #Template-Footer p {
-    color: #444444;
-    font-size: 13px; }
-  .footer p, #Template-Footer p {
-    line-height: 20px; }
-
-.copyright {
-  font-size: 13px;
-  font-weight: 300;
-  color: #666666; }
-
-.fine-print {
-  margin-bottom: 20px; }

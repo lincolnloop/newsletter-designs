@@ -25,13 +25,33 @@ body, h1, h2, h3, h4, h5, h6, p, table, tr, td, a, li, blockquote {
 	/* Prevent WebKit and Windows mobile changing default text sizes */
 	-webkit-text-size-adjust: 100%; 
 	-ms-text-size-adjust: 100%;
-  
 }
 
-table, td { 
+body, #Body-Table, #Body-Cell {
+	height: 100% !important;
+	width: 100% !important;
+
+	margin: 0; 
+	padding: 0; 
+}
+
+body, #Body-Table {
+	background-color: $light-gray;
+}
+
+table, td {
+	border-collapse: collapse !important;
 	mso-table-lspace: 0pt; 
 	mso-table-rspace: 0pt;
 } /* Remove spacing between tables in Outlook 2007 and up */
+
+table td {
+	padding: 0 $spacing*2;
+
+	td {
+		padding: 0;
+	}
+}
 
 h1, h2, h3, h4, h5, h6 {
 	display: block;
@@ -59,6 +79,27 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+h1 {
+	font-size: $base-font-size*2.5;
+	line-height: $base-line-height*2.5;
+}
+
+h2 {
+	margin-bottom: round($spacing/1.5);
+	color: $green !important; // Important to override Hotmail's overrides
+	font-size: 18px;
+}
+
+h3, h4, h5 {
+	margin-bottom: $spacing/4;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 14px;
+}
+
 img {
 	border: 0; 
 	height: auto; 
@@ -70,20 +111,23 @@ img {
 	-ms-interpolation-mode: bicubic;
 }
 
-table { 
-	border-collapse: collapse !important; 
+hr {
+	border: 1px dotted lighten($gray, 20%);
+	margin: $spacing 0;
 }
 
-body, #Body-Table, #Body-Cell {
-	height: 100% !important;
-	width: 100% !important;
-
-	margin: 0; 
-	padding: 0; 
+small {
+	font-size: 13px;
 }
 
-body, #Body-Table {
-	background-color: $light-gray;
+a {
+	color: lighten($blue, 15%);
+
+	img { border: none; }
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 /* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
@@ -97,9 +141,15 @@ body, #Body-Table {
 	background-color: $white;
 }
 
-
 #Body-Cell {
 	border-top: 4px solid $white;
+}
+
+.newsletter {
+	margin: 0 auto;
+	padding: $spacing 0 0;
+
+	background: $white;
 }
 
 /* ========== Header Styles ========== */
@@ -142,6 +192,21 @@ body, #Body-Table {
 	/*@editable*/ text-decoration: underline;
 }
 
+.header-content {
+	text-align: center;
+
+	h1 {
+		text-align: center;
+	}
+}
+
+.tagline {
+	font-size: round($base-font-size*1.1);
+	font-weight: 300;
+	line-height: round($base-font-size*2.5);
+	color: $gray;
+}
+
 /* ========== Body Styles ========== */
 
 .body-content{
@@ -155,7 +220,7 @@ body, #Body-Table {
 .body-content a:link, 
 .body-content a:visited, /* Yahoo! Mail Override */ 
 .body-content a .yshortcuts /* Yahoo! Mail Override */{
-	color: darken($blue, 20%);
+	@extend a;
 	font-weight: normal;
 	text-decoration: underline;
 }
@@ -163,7 +228,32 @@ body, #Body-Table {
 .body-content img {
 	display: inline;
 	height: auto;
-	max-width: 560px;
+	max-width: round($container-width - ($spacing*2));
+}
+
+.item {
+	margin-bottom: $spacing;
+}
+
+.sponsor {
+	padding: 0;
+
+	td {
+		vertical-align: top;
+	}
+
+	h5 {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.blurb {
+		padding-right: $spacing;
+	}
+
+	p {
+		margin-bottom: $spacing/2;
+	}
 }
 
 /* ========== Footer Styles ========== */
@@ -175,10 +265,6 @@ body, #Body-Table {
 	padding-left: $spacing;
 }
 
-.copyright, .advertise {
-	padding-top: 0;
-}
-
 .footer-content a:link, 
 .footer-content a:visited, /* Yahoo! Mail Override */ 
 .footer-content a .yshortcuts, 
@@ -186,6 +272,42 @@ body, #Body-Table {
 	color: $gray;
 	font-weight: normal;
 	text-decoration: underline;
+}
+
+.footer-content {
+	font-size: 14px;
+
+	&.td {
+		padding: $spacing/2 $spacing*2;
+	}
+}
+
+#Template-Footer {
+	background: darken($light-gray, 2%);
+	color: $dark-gray;
+
+	h6, p {
+		color: $dark-gray;
+		font-size: round($base-font-size*.85);
+	}
+
+	p {
+		line-height: round($base-line-height*.85);
+	}
+
+	a {
+		color: $gray !important;
+	}
+}
+
+.copyright, .advertise {
+	padding-top: 0;
+}
+
+.copyright {
+	font-size: round($base-font-size*.85);
+	font-weight: 300;
+	color: $gray;
 }
 
 /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
