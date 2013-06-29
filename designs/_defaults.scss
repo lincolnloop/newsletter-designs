@@ -75,10 +75,11 @@ table {
 }
 
 body, #Body-Table, #Body-Cell {
-	height: 100% !important; 
+	height: 100% !important;
+	width: 100% !important;
+
 	margin: 0; 
 	padding: 0; 
-	width: 100% !important;
 }
 
 body, #Body-Table {
@@ -93,7 +94,7 @@ body, #Body-Table {
 #Template-Container { width: $container-width; }
 
 body, #Body-Table {
-	/*@editable*/ background-color: $white;
+	background-color: $white;
 }
 
 
@@ -289,8 +290,8 @@ body, #Body-Table {
 	* @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
 	*/
 	.body-content {
-		/*@editable*/ font-size:18px !important;
-		/*@editable*/ line-height:125% !important;
+		/*@editable*/ font-size: 18px !important;
+		/*@editable*/ line-height: 125% !important;
 	}
 
 	/* ======== Footer Styles ======== */

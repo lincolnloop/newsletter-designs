@@ -66,9 +66,9 @@ table {
 
 body, #Body-Table, #Body-Cell {
   height: 100% !important;
+  width: 100% !important;
   margin: 0;
-  padding: 0;
-  width: 100% !important; }
+  padding: 0; }
 
 body, #Body-Table {
   background-color: #f7f7f7; }
@@ -82,7 +82,6 @@ body, #Body-Table {
   width: 600px; }
 
 body, #Body-Table {
-  /*@editable*/
   background-color: white; }
 
 #Body-Cell {
