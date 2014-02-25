@@ -1,0 +1,30 @@
+{
+  "name": "newsletter-designs",
+  "description": "Lightweight routing forked from Backbone, decoupled, and (soon to be) enhanced.",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Lincoln Loop",
+  "homepage": "https://github.com/lincolnloop/newsletter-designs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lincolnloop/newsletter-designs"
+  },
+  "bugs": {
+    "url": "http://github.com/lincolnloop/newsletter-designs/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/lincolnloop/newsletter-designs/blob/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "gulp-rename": "^1.1.0",
+    "gulp-util": "^2.2.14",
+    "gulp": "^3.5.2",
+    "gulp-livereload": "^1.1.1",
+    "gulp-wintersmith": "0.0.4",
+    "wintersmith-handlebars": "0.0.5",
+    "wintersmith-coffee": "^0.2.1"
+  }
+}
