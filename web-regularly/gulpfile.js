@@ -17,7 +17,10 @@ gulp.task('default', ['build', 'serve'], function() {
 
   gulp.watch(['contents/**', 'templates/**', 'sass/**'], ['build'])
     .on('change', function(file) {
-      server.changed(file.path);
+      // Workaround for issues where it reloads too quickly
+      setTimeout(function() {
+        server.changed(file.path);
+      }, 100);
     });
 });
 
