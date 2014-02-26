@@ -25,6 +25,7 @@
     "gulp-wintersmith": "0.0.4",
     "wintersmith-nunjucks": "^0.4.1",
     "gulp-replace": "^0.2.0",
-    "gulp-sass": "^0.7.1"
+    "gulp-sass": "^0.7.1",
+    "gulp-serve": "^0.1.1"
   }
 }
