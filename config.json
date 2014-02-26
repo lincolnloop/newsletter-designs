@@ -1,6 +1,0 @@
-{
-  "plugins": [
-    "wintersmith-coffee",
-    "wintersmith-handlebars"
-  ]
-}
