@@ -1,5 +1,6 @@
 ---
 template: issue.html
+issue: 7
 date: 2/26/2014
 interesting:
   - title: Tuts+ takes a look at flexbox as a solution to various layout hacks.

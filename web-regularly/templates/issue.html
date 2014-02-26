@@ -2,6 +2,25 @@
 
 {% block body %}
 
-  {{ page.metadata.interesting[0].title }}
+  <h2>What's interesting</h2>
+
+  {% for article in page.metadata.interesting %}
+    <h3><a href="{{ article.url }}">{{ article.title }}</a><h3>
+    <p>{{ article.summary }}</p>
+  {% endfor %}
+
+  <h2>Build it!</h2>
+
+  {% for article in page.metadata.build %}
+    <h3><a href="{{ article.url }}">{{ article.title }}</a><h3>
+    <p>{{ article.summary }}</p>
+  {% endfor %}
+
+  <h2>Check it out!</h2>
+
+  {% for article in page.metadata.checkout %}
+    <h3><a href="{{ article.url }}">{{ article.title }}</a><h3>
+    <p>{{ article.summary }}</p>
+  {% endfor %}
 
 {% endblock %}

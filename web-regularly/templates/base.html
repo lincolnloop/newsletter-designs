@@ -25,11 +25,16 @@
 
                           <table class="twelve columns">
                             <tr>
-                              <td class="six sub-columns">
-                                <img src="http://placehold.it/200x50">
+                              <td class="ten sub-columns" style="vertical-align:middle;">
+                                <strong>Issue #{{ page.metadata.issue }}</strong>
+                                &sdot;
+                                {{ moment(page.date).format('MMMM Do, YYYY') }}
+                                <!-- *|IFNOT:ARCHIVE_PAGE|* -->&sdot; <a href="*|ARCHIVE|*" target="_blank">View it in your browser</a><!-- *|END:IF|* -->
                               </td>
-                              <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
-                                <span class="template-label">BASIC</span>
+                              <td class="two sub-columns last" style="text-align:right; vertical-align:middle;">
+                                <span class="logo">
+                                  <img src="https://raw.github.com/lincolnloop/newsletter-designs/develop/img/ll-logo.png" alt="Brought to you by Lincoln Loop">
+                                </span>
                               </td>
                               <td class="expander"></td>
                             </tr>
@@ -58,6 +63,7 @@
                               <h1><center>{{ title }}</center></h1>
                               <p class="lead">{{ tagline }}</p>
                               <p>{{ page.html }}</p>
+                              {% block body %}{% endblock %}
                             </td>
                             <td class="expander"></td>
                           </tr>
