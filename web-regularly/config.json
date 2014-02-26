@@ -1,0 +1,7 @@
+{
+  "locals": {
+    "title": "Web Regularly",
+    "tagline": "Awesome web design & development resources from the last few weeks."
+  },
+  "plugins": ["wintersmith-nunjucks"]
+}
