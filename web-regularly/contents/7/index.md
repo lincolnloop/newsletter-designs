@@ -81,5 +81,3 @@ checkout:
       An extremely detailed WebGL rendering of an eye, complete with a
       reflection of the room it's in. Use the mouse to rotate the eye around.
 ---
-
-Test text

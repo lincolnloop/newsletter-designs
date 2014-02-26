@@ -61,26 +61,16 @@
                           <tr>
                             <td>
                               <h1><center>{{ title }}</center></h1>
+
                               <p class="lead">{{ tagline }}</p>
-                              <p>{{ page.html }}</p>
+
                               {% block body %}{% endblock %}
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
 
-                      </td>
-                    </tr>
-                  </table>
+                              <p class="copyright">
+                                Copyright &copy; {{ moment(page.date).format('YYYY') }} Lincoln Loop, All rights reserved.
+                              </p>
 
-                  <table class="row callout">
-                    <tr>
-                      <td class="wrapper last">
-
-                        <table class="twelve columns">
-                          <tr>
-                            <td class="panel">
-                              <p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. <a href="#">Click it! »</a></p>
+                              *|IFNOT:ARCHIVE_PAGE|**|LIST:DESCRIPTION|**|END:IF|*
                             </td>
                             <td class="expander"></td>
                           </tr>
@@ -98,35 +88,10 @@
                           <tr>
                             <td class="left-text-pad">
 
-                              <h5>Connect With Us:</h5>
-
-                              <table class="tiny-button facebook">
-                                <tr>
-                                  <td>
-                                    <a href="#">Facebook</a>
-                                  </td>
-                                </tr>
-                              </table>
-
-                              <br>
-
-                              <table class="tiny-button twitter">
-                                <tr>
-                                  <td>
-                                    <a href="#">Twitter</a>
-                                  </td>
-                                </tr>
-                              </table>
-
-                              <br>
-
-                              <table class="tiny-button google-plus">
-                                <tr>
-                                  <td>
-                                    <a href="#">Google +</a>
-                                  </td>
-                                </tr>
-                              </table>
+                              <p><a href="mailto:info@lincolnloop.com?subject=Sponsor Web Regularly">Sponsor Web Regularly</a></p>
+                              <p><a href="mailto:info@lincolnloop.com?subject=Place a Job Ad in Web Regularly">Place a Job Ad</a></p>
+                              <p><a href="http://lincolnloop.com">http://lincolnloop.com</a></p>
+                              <p><a href="http://twitter.com/lincolnloop">@lincolnloop</a></p>
 
                             </td>
                             <td class="expander"></td>
@@ -139,9 +104,10 @@
                         <table class="six columns">
                           <tr>
                             <td class="last right-text-pad">
-                              <h5>Contact Info:</h5>
-                              <p>Phone: 408.341.0600</p>
-                              <p>Email: <a href="mailto:hseldon@trantor.com">hseldon@trantor.com</a></p>
+                              <p><strong>Our mailing address:</strong></p>
+                              <p>Lincoln Loop</p>
+                              <p>1604 Ashland Ave #96971</p>
+                              <p>Chicago, IL 60608</p>
                             </td>
                             <td class="expander"></td>
                           </tr>
@@ -160,7 +126,9 @@
                           <tr>
                             <td align="center">
                               <center>
-                                <p style="text-align:center;"><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Unsubscribe</a></p>
+                                <a href="*|UNSUB|*">Unsubscribe</a> |
+                                <a href="*|UPDATE_PROFILE|*">Subscription Preferences</a> |
+                                <a href="*|FORWARD|*">Forward to Friend &rarr;</a>
                               </center>
                             </td>
                             <td class="expander"></td>
