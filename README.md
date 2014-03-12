@@ -29,3 +29,6 @@ Open your browser to localhost:3000, and use the issue you want to preview as
 the url:
 
     http://localhost:3000/7.html
+
+When the newsletter looks right, then simply copy the HTML from the dist folder
+and paste into the email service.
