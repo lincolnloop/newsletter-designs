@@ -35,9 +35,9 @@ gulp.task('sass', function() {
   /*
    * Generate css by compiling the sass
    */
-  return gulp.src('sass/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('build'));
+  // return gulp.src('sass/*.scss')
+  //   .pipe(sass())
+  //   .pipe(gulp.dest('build'));
 });
 
 gulp.task('build', ['wintersmith', 'sass'], function() {
@@ -45,7 +45,7 @@ gulp.task('build', ['wintersmith', 'sass'], function() {
    * Build the project after wintersmith and sass are done
    */
   gulp.src('build/**/*.html')
-    .pipe(replace('/* REPLACE WITH CSS */', fs.readFileSync('build/screen.css', 'utf8')))
+    // .pipe(replace('/* REPLACE WITH CSS */', fs.readFileSync('build/screen.css', 'utf8')))
     .pipe(gulp.dest('dist'));
 });
 
