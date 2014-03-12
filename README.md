@@ -28,4 +28,4 @@ Run gulp:
 Open your browser to localhost:3000, and use the issue you want to preview as
 the url:
 
-    http://localhost:3000/7/
+    http://localhost:3000/7.html
