@@ -1,152 +1,125 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width" />
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Facebook sharing information tags -->
+  <meta property="og:title" content="*|MC:SUBJECT|*">
+  <title>*|MC:SUBJECT|*</title>
 
-    <style type="text/css">
-      /* REPLACE WITH CSS */
-    </style>
-  </head>
-  <body>
-    <table class="body">
-      <tr>
-        <td class="center" align="center" valign="top">
-          <center>
 
-            <table class="row header">
+<style type="text/css">
+  /* REPLACE WITH CSS */
+</style>
+</head>
+
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+<center>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="Body-Table">
+  <tr>
+    <td align="center" valign="top" id="Body-Cell">
+      <!-- BEGIN TEMPLATE // -->
+      <table border="0" cellpadding="0" cellspacing="0" id="Template-Container" class="newsletter">
+        <tr>
+          <td align="center" valign="top">
+            <!-- BEGIN PREHEADER // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="Template-Preheader">
               <tr>
-                <td class="center" align="center">
-                  <center>
+                <td valign="top" class="preheader-content" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;" mc:edit="preheader_content00">
+                  <strong>Issue #{{ page.metadata.issue }}</strong> &sdot; {{ moment(page.date).format('MMMM Do, YYYY') }} <!-- *|IFNOT:ARCHIVE_PAGE|* -->⋅ <a href="*|ARCHIVE|*" target="_blank">View it in your browser</a><!-- *|END:IF|* -->
+                </td>
 
-                    <table class="container">
-                      <tr>
-                        <td class="wrapper last">
+                <td valign="top" width="180" class="preheader-content logo-box" style="padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 0;" mc:edit="preheader_content01">
+                  <a href="http://lincolnloop.com/"><img src="https://raw.github.com/lincolnloop/newsletter-designs/master/img/ll-logo.png" alt="Brought to you by Lincoln Loop"></a>
+                </td>
 
-                          <table class="twelve columns">
-                            <tr>
-                              <td class="ten sub-columns" style="vertical-align:middle;">
-                                <strong>Issue #{{ page.metadata.issue }}</strong>
-                                &sdot;
-                                {{ moment(page.date).format('MMMM Do, YYYY') }}
-                                <!-- *|IFNOT:ARCHIVE_PAGE|* -->&sdot; <a href="*|ARCHIVE|*" target="_blank">View it in your browser</a><!-- *|END:IF|* -->
-                              </td>
-                              <td class="two sub-columns last" style="text-align:right; vertical-align:middle;">
-                                <span class="logo">
-                                  <img src="https://raw.github.com/lincolnloop/newsletter-designs/develop/img/ll-logo.png" alt="Brought to you by Lincoln Loop">
-                                </span>
-                              </td>
-                              <td class="expander"></td>
-                            </tr>
-                          </table>
-
-                        </td>
-                      </tr>
-                    </table>
-
-                  </center>
+              </tr>
+            </table>
+            <!-- // END PREHEADER -->
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">
+            <!-- BEGIN HEADER // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="Template-Header">
+              <tr>
+                <td valign="top" class="header-content">
+                  <h1>{{ title }}</h1>
+                  <p class="tagline" mc:edit="tagline">{{ tagline }}</p>
+                </td>
+              </tr>
+            </table>
+            <!-- // END HEADER -->
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">
+            <!-- BEGIN BODY // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="Template-Body">
+              <tr>
+                <td valign="top" class="body-content">
+                  {% block body %}{% endblock %}
+                </td>
+              </tr>
+            </table>
+            <!-- // END BODY -->
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">
+            <!-- BEGIN FOOTER // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="Template-Sub-Footer">
+              <tr>
+                <td valign="top" class="footer-content first" mc:edit="footer_content00">
+                  <a href="https://lincolnloop.com/">lincolnloop.com</a>&nbsp;&nbsp;&nbsp;
+                  <a href="*|TWITTER:PROFILEURL|*">@LincolnLoop</a>&nbsp;&nbsp;&nbsp;
+                  <a href="*|FORWARD|*">Forward to Friend &rarr;</a>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" class="footer-content copyright" style="padding-top: 0;" mc:edit="footer_content01">
+                  Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" class="footer-content advertise" style="padding-top: 0;" mc:edit="footer_content02">
+                    <strong><a href="mailto:info@lincolnloop.com?subject=Sponsor Django Round-up">Sponsor Web Design Regularly</a></strong>&nbsp;&nbsp;&nbsp;
+                    <strong><a href="mailto:info@lincolnloop.com?subject=Place a Job Ad in Django Round-up">Place a Job Ad</a></strong>&nbsp;&nbsp;&nbsp;
                 </td>
               </tr>
             </table>
 
-            <table class="container">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="Template-Footer">
               <tr>
-                <td>
+                <td valign="top" class="footer-content" style="padding-bottom: 20px;">
+                    <small>*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*</small>
 
-                  <table class="row">
-                    <tr>
-                      <td class="wrapper last">
+                    <br>
+                    <br>
 
-                        <table class="twelve columns">
-                          <tr>
-                            <td>
-                              <h1><center>{{ title }}</center></h1>
-
-                              <p class="lead">{{ tagline }}</p>
-
-                              {% block body %}{% endblock %}
-
-                              <p class="copyright">
-                                Copyright &copy; {{ moment(page.date).format('YYYY') }} Lincoln Loop, All rights reserved.
-                              </p>
-
-                              *|IFNOT:ARCHIVE_PAGE|**|LIST:DESCRIPTION|**|END:IF|*
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-
-                      </td>
-                    </tr>
-                  </table>
-
-                  <table class="row footer">
-                    <tr>
-                      <td class="wrapper">
-
-                        <table class="six columns">
-                          <tr>
-                            <td class="left-text-pad">
-
-                              <p><a href="mailto:info@lincolnloop.com?subject=Sponsor Web Regularly">Sponsor Web Regularly</a></p>
-                              <p><a href="mailto:info@lincolnloop.com?subject=Place a Job Ad in Web Regularly">Place a Job Ad</a></p>
-                              <p><a href="http://lincolnloop.com">http://lincolnloop.com</a></p>
-                              <p><a href="http://twitter.com/lincolnloop">@lincolnloop</a></p>
-
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-
-                      </td>
-                      <td class="wrapper last">
-
-                        <table class="six columns">
-                          <tr>
-                            <td class="last right-text-pad">
-                              <p><strong>Our mailing address:</strong></p>
-                              <p>Lincoln Loop</p>
-                              <p>1604 Ashland Ave #96971</p>
-                              <p>Chicago, IL 60608</p>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-
-                      </td>
-                    </tr>
-                  </table>
-
-
-                  <table class="row">
-                    <tr>
-                      <td class="wrapper last">
-
-                        <table class="twelve columns">
-                          <tr>
-                            <td align="center">
-                              <center>
-                                <a href="*|UNSUB|*">Unsubscribe</a> |
-                                <a href="*|UPDATE_PROFILE|*">Subscription Preferences</a> |
-                                <a href="*|FORWARD|*">Forward to Friend &rarr;</a>
-                              </center>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
-
-                      </td>
-                    </tr>
-                  </table>
-
-                <!-- container end below -->
+                       <h6>Our mailing address:</h6>
+                    <p class="address">
+                      *|HTML:LIST_ADDRESS_HTML|*
+                    </p>
+                    *|END:IF|*
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" class="footer-content" style="padding-top: 0; padding-bottom: 20px;">
+                    <a href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;
+                    <a href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;&nbsp;&nbsp;
                 </td>
               </tr>
             </table>
+            <!-- // END FOOTER -->
+          </td>
+        </tr>
+      </table>
+      <!-- // END TEMPLATE -->
+    </td>
+  </tr>
+</table>
 
-          </center>
-        </td>
-      </tr>
-    </table>
-  </body>
+</center>
+</body>
 </html>

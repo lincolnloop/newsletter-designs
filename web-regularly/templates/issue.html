@@ -1,28 +1,44 @@
-{% extends "base.html" %}
+% extends "base.html" %}
 
 {% block body %}
 
   {{ page.html }}
 
-  <h2>What's interesting</h2>
+  <div mc:edit="interesting_links">
 
-  {% for article in page.metadata.interesting %}
-    <h3><a href="{{ article.url }}">{{ article.title }}</a><h3>
-    <p>{{ article.summary }}</p>
-  {% endfor %}
+    <h2>What's Interesting</h2>
 
-  <h2>Build it!</h2>
+    {% for article in page.metadata.interesting %}
+      <h3><a href="{{ article.url }}">{{ article.title }}</a><h3>
+      <p>{{ article.summary }}</p>
+    {% endfor %}
 
-  {% for article in page.metadata.build %}
-    <h3><a href="{{ article.url }}">{{ article.title }}</a><h3>
-    <p>{{ article.summary }}</p>
-  {% endfor %}
+  </div>
 
-  <h2>Check it out!</h2>
+  <hr>
 
-  {% for article in page.metadata.checkout %}
-    <h3><a href="{{ article.url }}">{{ article.title }}</a><h3>
-    <p>{{ article.summary }}</p>
-  {% endfor %}
+  <div mc:edit="code_examples">
+
+    <h2>Build It!</h2>
+
+    {% for article in page.metadata.build %}
+      <h4><a href="{{ article.url }}">{{ article.title }}</a><h4>
+      <p>{{ article.summary }}</p>
+    {% endfor %}
+
+  </div>
+
+  <hr>
+
+  <div mc:edit="html5_demos">
+
+    <h2>Check it out!</h2>
+
+    {% for article in page.metadata.checkout %}
+      <h4><a href="{{ article.url }}">{{ article.title }}</a><h4>
+      <p>{{ article.summary }}</p>
+    {% endfor %}
+
+  </div>
 
 {% endblock %}
