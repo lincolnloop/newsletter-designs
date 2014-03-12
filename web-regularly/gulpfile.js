@@ -15,7 +15,7 @@ gulp.task('default', ['build', 'serve'], function() {
    */
   var server = livereload();
 
-  gulp.watch(['contents/**', 'templates/**', 'sass/**'], ['build'])
+  gulp.watch(['contents/**', 'templates/**', 'css/**'], ['build'])
     .on('change', function(file) {
       // Workaround for issues where it reloads too quickly
       setTimeout(function() {
@@ -31,21 +31,21 @@ gulp.task('wintersmith', function() {
   return gulp.src('config.json').pipe(wintersmith('build'));
 });
 
-gulp.task('sass', function() {
+gulp.task('css', function() {
   /*
-   * Generate css by compiling the sass
+   * Generate css by... simply copying the css file. :-(
    */
-  // return gulp.src('sass/*.scss')
-  //   .pipe(sass())
-  //   .pipe(gulp.dest('build'));
+  return gulp.src('css/*.css')
+    // .pipe(sass())
+    .pipe(gulp.dest('build'));
 });
 
-gulp.task('build', ['wintersmith', 'sass'], function() {
+gulp.task('build', ['wintersmith', 'css'], function() {
   /*
    * Build the project after wintersmith and sass are done
    */
   gulp.src('build/**/*.html')
-    // .pipe(replace('/* REPLACE WITH CSS */', fs.readFileSync('build/screen.css', 'utf8')))
+    .pipe(replace('/* REPLACE WITH CSS */', fs.readFileSync('build/screen.css', 'utf8')))
     .pipe(gulp.dest('dist'));
 });
 
