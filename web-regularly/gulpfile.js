@@ -4,7 +4,6 @@ var fs = require('fs');
 var gulp = require('gulp');
 var livereload = require('gulp-livereload');
 var replace = require('gulp-replace');
-var sass = require('gulp-sass');
 var serve = require('gulp-serve');
 var wintersmith = require('gulp-wintersmith');
 
